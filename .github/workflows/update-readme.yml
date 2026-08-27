@@ -1,0 +1,45 @@
+name: Update README TOC
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-toc:
+    runs-on: ubuntu-latest
+    # 봇이 만든 커밋으로 워크플로우가 다시 도는 것을 방지
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 새로 추가된 패키지에 문서용 README.md를 만들고, 최상단 README.md 목차를 갱신
+      - name: Update TOC
+        run: python .github/scripts/update_readme.py
+
+      - name: Commit & push if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "변경 사항이 없습니다."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "docs: 패키지 문서 및 README 목차 자동 갱신 [skip ci]"
+          git push
