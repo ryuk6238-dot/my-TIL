@@ -1,6 +1,8 @@
 # my-TIL
 
-공부 레포 — CS 기초 지식을 정리하고 기록합니다.
+Java / Spring 백엔드 기술면접 대비 학습 기록.
+
+
 
 ## 📌 사용법
 
@@ -18,9 +20,14 @@
 
 - 📁 **[Data_Structure](./Data_Structure/README.md)**
 - 📁 **[Database](./Database/README.md)**
+- 📁 **[Infra](./Infra/README.md)**
+- 📁 **[Java](./Java/README.md)**
+- 📁 **[JPA](./JPA/README.md)**
 - 📁 **[Network](./Network/README.md)**
 - 📁 **[Operating_System](./Operating_System/README.md)**
+- 📁 **[Project](./Project/README.md)**
+- 📁 **[Spring](./Spring/README.md)**
 
-> 총 4개의 문서
+> 총 10개의 문서
 
 <!-- TOC:END -->
