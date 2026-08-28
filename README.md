@@ -28,6 +28,6 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
 - 📁 **[Project](./Project/README.md)**
 - 📁 **[Spring](./Spring/README.md)**
 
-> 총 10개의 문서
+> 총 9개의 문서
 
 <!-- TOC:END -->
