@@ -62,6 +62,7 @@ This repo is a personal TIL (Today I Learned) archive for Java/Spring 백엔드 
 | Spring Security 기본기 | `Spring Security 기본기` | `Spring/Concepts/08-spring-security-basics.md` |
 | Spring Security - 쿠키/세션 기반 인증/인가 | `Spring Security - 쿠키 세션 기반 인증 인가` | `Spring/Concepts/09-spring-security-session-auth.md` |
 | 유저 관리 기능 | `유저 관리 기능` | `Spring/Concepts/10-user-management.md` |
+| Spring Batch | `Spring Batch` (노션에 아직 없음 — export되면 제목 확인 후 매칭) | `Spring/Concepts/11-spring-batch.md` |
 | Docker: 빌드, 배포, 컨테이너 실행하기 | `Docker 빌드, 배포, 컨테이너 실행하기` | `Infra/Concepts/01-docker.md` |
 | AWS: 계정 생성부터 ECS, S3, RDS 설정 | `AWS 계정 생성부터 ECS, S3, RDS 설정` | `Infra/Concepts/02-aws-setup.md` |
 | AWS ECS 로 프로그램 배포하기 | `AWS ECS 로 프로그램 배포하기` | `Infra/Concepts/03-aws-ecs-deploy.md` |
