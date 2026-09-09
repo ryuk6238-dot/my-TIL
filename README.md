@@ -77,6 +77,7 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
     - [Spring Security 기본기](./Spring/Concepts/08-spring-security-basics.md)
     - [Spring Security - 쿠키/세션 기반 인증/인가](./Spring/Concepts/09-spring-security-session-auth.md)
     - [유저 관리 기능](./Spring/Concepts/10-user-management.md)
+    - [Spring Batch](./Spring/Concepts/11-spring-batch.md)
   - 📁 **[QnA](./Spring/QnA/README.md)**
     - [Spring 오버뷰 — Q&A](./Spring/QnA/01-spring-overview.md)
     - [Spring Boot: 코드 레벨 아키텍처 — Q&A](./Spring/QnA/02-spring-boot-architecture.md)
@@ -88,7 +89,8 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
     - [Spring Security 기본기 — Q&A](./Spring/QnA/08-spring-security-basics.md)
     - [Spring Security - 쿠키/세션 기반 인증/인가 — Q&A](./Spring/QnA/09-spring-security-session-auth.md)
     - [유저 관리 기능 — Q&A](./Spring/QnA/10-user-management.md)
+    - [Spring Batch — Q&A](./Spring/QnA/11-spring-batch.md)
 
-> 총 70개의 문서
+> 총 72개의 문서
 
 <!-- TOC:END -->
