@@ -49,4 +49,14 @@
 ### 7. 실행 방식과 확장
 
 - **스케줄링과의 관계**: Spring Batch 자체는 "언제 실행할지"를 결정하지 않는다. 실제 운영에서는 스케줄러(Spring `@Scheduled`, Quartz, 또는 외부 스케줄러/오케스트레이터)가 특정 시각에 `JobLauncher`를 호출해 `Job`을 실행시키는 방식으로 연동한다.
+  - **`@Scheduled`는 Batch 전용 기능이 아니다.** Spring Framework의 범용 스케줄링 기능(`org.springframework.scheduling.annotation.Scheduled`)으로, cron 표현식이나 `fixedRate`/`fixedDelay`로 지정한 시점·주기에 그 메서드를 실행시켜주는 것뿐이다. 이메일 발송, 캐시 정리 등 배치와 무관한 어떤 메서드에도 동일하게 쓸 수 있다.
+  - **실제 연동 방식**: `@Scheduled`가 트리거하는 메서드 본문 안에서 `JobLauncher.run(job, jobParameters)`를 호출하는 식으로 Batch와 엮인다. `@Scheduled`가 Job을 직접 아는 게 아니라, 그 메서드가 우연히 Batch Job을 실행하는 로직을 담고 있는 것이다.
+    ```java
+    @Scheduled(cron = "0 0 1 * * *")
+    public void runBatchJob() {
+        jobLauncher.run(myJob, jobParameters);
+    }
+    ```
+  - `@Scheduled`를 쓰려면 설정 클래스에 `@EnableScheduling`을 추가해야 활성화된다.
+  - 실제 서비스에서는 `@Scheduled` 대신 Quartz, 외부 스케줄러(AWS EventBridge, k8s CronJob 등)로 Job을 트리거하는 경우도 많다 — 어느 쪽이든 "Batch를 실행하는 트리거는 외부에서 갈아 끼울 수 있는 별개의 관심사"라는 원리는 동일하다.
 - **병렬/분산 처리**: 처리량을 늘리기 위한 확장 옵션으로 멀티스레드 Step(하나의 Step 내에서 여러 스레드가 chunk를 병렬 처리), 병렬 Step(서로 다른 Step을 동시 실행), Partitioning(데이터를 여러 파티션으로 나눠 여러 워커가 나눠 처리) 등이 있다. 실무 규모가 커질수록 이런 확장 전략이 필요해진다.
