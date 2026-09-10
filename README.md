@@ -46,7 +46,7 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
     - [객체지향 프로그래밍의 이해](./Java/Concepts/02-oop.md)
     - [컬렉션 프레임워크와 Stream API](./Java/Concepts/03-collections-stream.md)
     - [알고리즘과 자료구조 이해하기](./Java/Concepts/04-algorithm-datastructure.md)
-    - [Java 비동기 처리하기](./Java/Concepts/05-java-async.md)
+    - [Java 비동기 처리하기](Java/Concepts/05-java-async.md)
   - 📁 **[QnA](./Java/QnA/README.md)**
     - [Java 프로그래밍 시작하기 — Q&A](./Java/QnA/01-java-programming-start.md)
     - [객체지향 프로그래밍의 이해 — Q&A](./Java/QnA/02-oop.md)
