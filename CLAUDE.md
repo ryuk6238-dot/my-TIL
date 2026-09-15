@@ -69,3 +69,14 @@ This repo is a personal TIL (Today I Learned) archive for Java/Spring 백엔드 
 | 백엔드 통신 디자인 패턴 | `백엔드 통신 디자인 패턴` | `Network/Concepts/01-backend-communication-patterns.md` |
 | 프로토콜과 HTTPS 이해하기 | `프로토콜과 HTTPS 이해하기` | `Network/Concepts/02-protocol-https.md` |
 | 프록시 및 부하 분산기 | `프록시 및 부하 분산기` | `Network/Concepts/03-proxy-load-balancer.md` |
+
+## Q&A 미리보기 가독성
+
+사용자는 QnA 파일을 Markdown Preview 화면으로 읽는다. Q&A를 추가하거나 수정할 때는 렌더링된 미리보기의 가독성을 기준으로 작성한다.
+
+- 한 문단에는 한 가지 핵심만 담고, 긴 설명은 짧은 문단으로 나눈다.
+- 핵심 결론과 중요한 용어만 굵게 강조한다. 문단 전체를 굵게 표시하지 않는다.
+- 순서는 번호 목록, 병렬 설명은 글머리표 목록으로 표현한다. 목록 앞뒤에는 빈 줄을 둔다.
+- 코드는 언어를 지정한 fenced code block으로 작성한다.
+- 기존 Q&A 형식을 유지한다. `### Qn.` 제목은 인용문 밖에 두고, 질문과 답변은 `>` 인용문 안에 작성한다. 문단 사이 빈 줄에도 `>`를 넣고, 목록 및 코드 블록의 모든 줄에도 `>`를 붙여 미리보기에서 인용 블록이 유지되도록 한다.
+- 같은 주제의 후속 질문은 기존 항목에 이어서 기록한다. 이 가독성 지침만을 이유로 기존 문답 전체를 일괄 수정하지 않는다.
