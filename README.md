@@ -18,6 +18,7 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
 
 <!-- TOC:START -->
 
+- [Repository instructions](./AGENTS.md)
 - [CLAUDE.md](./CLAUDE.md)
 - 📁 **[Data_Structure](./Data_Structure/README.md)**
 - 📁 **[Database](./Database/README.md)**
@@ -92,6 +93,6 @@ Java / Spring 백엔드 기술면접 대비 학습 기록.
     - [유저 관리 기능 — Q&A](./Spring/QnA/10-user-management.md)
     - [Spring Batch — Q&A](./Spring/QnA/11-spring-batch.md)
 
-> 총 73개의 문서
+> 총 74개의 문서
 
 <!-- TOC:END -->
